@@ -1,11 +1,11 @@
 #pragma once
 #include "Widget.h"
 
-#define DefaultBackgroundColor			WColor(.15f, .15f, .15f, 1)
-#define DefaultForegroundColor			WColor(1, 1, 1, 1)
-#define DefaultTitleBackgroundColor		WColor(0.05f, 0.05f, 0.05f, 1);
+#define WDefaultBackgroundColor			WColor(.15f, .15f, .15f, 1)
+#define WDefaultForegroundColor			WColor(1, 1, 1, 1)
+#define WDefaultTitleBackgroundColor		WColor(0.05f, 0.05f, 0.05f, 1);
 
-#define TitleHeight						35
+#define WTitleHeight						35
 
 class Menu : public Widget
 {

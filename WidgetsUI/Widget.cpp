@@ -7,6 +7,7 @@ Widget::Widget() : Widget::Widget(this)
 
 Widget::Widget(Widget * pParentWidget) : Parent(pParentWidget)
 {
+	Name = L"";
 	Enabled = true;
 }
 
@@ -19,11 +20,14 @@ bool Widget::AddWidget(Widget * pWidget)
 	return true;
 }
 
-const Widget * Widget::GetWidgetByName(const PTCHAR name)
+const Widget * Widget::GetWidgetByName(std::wstring name)
 {
 	for (auto widget : ChildWidgets)
 	{
-		if (wcscmp(widget->Name, name) == 0)
+		if (widget->Name.empty())
+			continue;
+
+		if (widget->Name.compare(name) == 0)
 			return widget;
 	}
 

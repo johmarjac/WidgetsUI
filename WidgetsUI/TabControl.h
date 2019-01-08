@@ -2,8 +2,8 @@
 #include "Widget.h"
 #include "TabPage.h"
 
-#define PageNameWidth	70
-#define PageNameHeight	25
+#define WPageNameWidth	70
+#define WPageNameHeight	25
 
 class TabControl : public Widget
 {

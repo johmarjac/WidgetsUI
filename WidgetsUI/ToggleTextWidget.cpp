@@ -7,7 +7,7 @@ ToggleTextWidget::ToggleTextWidget(Widget * parent, bool * toggleState, std::wst
 	Text = text;
 	CheckedText = DefaultCheckedText;
 	UncheckedText = DefaultUncheckedText;
-	BackgroundColor = DefaultBackgroundColor;
+	BackgroundColor = WDefaultBackgroundColor;
 	CheckedColor = DefaultCheckedColor;
 	UncheckedColor = DefaultUncheckedColor;
 	ForegroundColor = WColor(1, 1, 1, 1);

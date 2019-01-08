@@ -4,7 +4,7 @@
 TabControl::TabControl(Widget * parent)
 {
 	Parent = parent;
-	ClientAreaOffset = WVector2(0, PageNameHeight);
+	ClientAreaOffset = WVector2(0, WPageNameHeight);
 }
 
 void TabControl::AddPage(TabPage * page)
@@ -27,8 +27,8 @@ void TabControl::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			auto page = Pages[i];
 			const auto topLeft = GetAbsolutePosition();
 
-			if (CursorPosition.X >= (topLeft.X + (i * PageNameWidth)) && CursorPosition.X < (topLeft.X + (i * PageNameWidth) + PageNameWidth)
-				&& CursorPosition.Y >= topLeft.Y && CursorPosition.Y < (topLeft.Y + PageNameHeight))
+			if (CursorPosition.X >= (topLeft.X + (i * WPageNameWidth)) && CursorPosition.X < (topLeft.X + (i * WPageNameWidth) + WPageNameWidth)
+				&& CursorPosition.Y >= topLeft.Y && CursorPosition.Y < (topLeft.Y + WPageNameHeight))
 			{
 				if (CurrentPage == page)
 					continue;
@@ -72,12 +72,12 @@ void TabControl::Draw(ICanvas * canvas)
 
 		// Draw the Page Background
 		if (CurrentPage == page)
-			canvas->DrawFilledRect(topLeft.X + (i * PageNameWidth), topLeft.Y, PageNameWidth, PageNameHeight, WColor(.15f, .15f, .15f, 1));
+			canvas->DrawFilledRect(topLeft.X + (i * WPageNameWidth), topLeft.Y, WPageNameWidth, WPageNameHeight, WColor(.15f, .15f, .15f, 1));
 		else
-			canvas->DrawFilledRect(topLeft.X + (i * PageNameWidth), topLeft.Y, PageNameWidth, PageNameHeight, WColor(.075f, .075f, .075f, 1));
+			canvas->DrawFilledRect(topLeft.X + (i * WPageNameWidth), topLeft.Y, WPageNameWidth, WPageNameHeight, WColor(.075f, .075f, .075f, 1));
 		
 		// Draw the Page Name
-		canvas->DrawString(page->PageName.c_str(), topLeft.X + (i * PageNameWidth) + (PageNameWidth * 0.5f) - (pageNameSize.X * 0.5f), topLeft.Y, WColor(1, 1, 1, 1));
+		canvas->DrawString(page->PageName.c_str(), topLeft.X + (i * WPageNameWidth) + (WPageNameWidth * 0.5f) - (pageNameSize.X * 0.5f), topLeft.Y, WColor(1, 1, 1, 1));
 	}
 
 	if (CurrentPage == nullptr)

@@ -17,7 +17,7 @@ public:
 public:
 	
 	/// Widgets Identifier
-	PTCHAR Name;
+	std::wstring Name;
 
 	/// Whether the Widget is Enabled or Disabled
 	bool Enabled;
@@ -45,7 +45,7 @@ private:
 
 public:
 	bool AddWidget(Widget * pWidget);
-	const Widget * GetWidgetByName(const PTCHAR name);
+	const Widget * GetWidgetByName(std::wstring name);
 
 	/// Gets whether the Cursors Position is inside the given Rectangle
 	bool IsCursorInsideRectangle(WRectangle rectangle, bool relativePosition = true);

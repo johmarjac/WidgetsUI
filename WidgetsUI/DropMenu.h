@@ -2,9 +2,9 @@
 #include "Widget.h"
 #include "Structs.h"
 
-#define DefaultBackgroundColor			WColor(.15f, .15f, .15f, 1)
-#define DefaultForegroundColor			WColor(1, 1, 1, 1)
-#define DefaultTitleBackgroundColor		WColor(0.05f, 0.05f, 0.05f, 1);
+#define WDefaultBackgroundColor			WColor(.15f, .15f, .15f, 1)
+#define WDefaultForegroundColor			WColor(1, 1, 1, 1)
+#define WDefaultTitleBackgroundColor		WColor(0.05f, 0.05f, 0.05f, 1);
 
 class DropMenu : public Widget
 {

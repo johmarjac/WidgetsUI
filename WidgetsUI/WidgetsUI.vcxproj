@@ -98,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -113,7 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,7 +130,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -159,36 +159,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Header\Button.h" />
-    <ClInclude Include="Header\DropMenu.h" />
-    <ClInclude Include="Header\ICanvas.hpp" />
-    <ClInclude Include="Header\Label.h" />
-    <ClInclude Include="Header\Menu.h" />
-    <ClInclude Include="Header\Slider.h" />
-    <ClInclude Include="Header\Structs.h" />
-    <ClInclude Include="Header\TabControl.h" />
-    <ClInclude Include="Header\TabPage.h" />
-    <ClInclude Include="Header\ToggleTextWidget.h" />
-    <ClInclude Include="Header\Widget.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="DropMenu.h" />
+    <ClInclude Include="ICanvas.hpp" />
+    <ClInclude Include="Label.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Slider.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Structs.h" />
+    <ClInclude Include="TabControl.h" />
+    <ClInclude Include="TabPage.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ToggleTextWidget.h" />
+    <ClInclude Include="Widget.h" />
+    <ClInclude Include="WidgetsUI.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Button.cpp" />
-    <ClCompile Include="Source\DropMenu.cpp" />
-    <ClCompile Include="Source\Label.cpp" />
-    <ClCompile Include="Source\Menu.cpp" />
-    <ClCompile Include="Source\Slider.cpp" />
-    <ClCompile Include="Source\TabControl.cpp" />
-    <ClCompile Include="Source\TabPage.cpp" />
-    <ClCompile Include="Source\ToggleTextWidget.cpp" />
-    <ClCompile Include="Source\Widget.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="DropMenu.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Slider.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TabControl.cpp" />
+    <ClCompile Include="TabPage.cpp" />
+    <ClCompile Include="ToggleTextWidget.cpp" />
+    <ClCompile Include="Widget.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

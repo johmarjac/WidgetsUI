@@ -2,16 +2,16 @@
 #include "Menu.h"
 
 const int Padding = 10;
-const int CloseSize = TitleHeight - Padding;
+const int CloseSize = WTitleHeight - Padding;
 
 Menu::Menu()
 {
 	Parent = this;
-	ClientAreaOffset = WVector2(0, TitleHeight);
+	ClientAreaOffset = WVector2(0, WTitleHeight);
 
-	BackgroundColor = DefaultBackgroundColor;
-	ForegroundColor = DefaultForegroundColor;
-	TitleBackgroundColor = DefaultTitleBackgroundColor;
+	BackgroundColor = WDefaultBackgroundColor;
+	ForegroundColor = WDefaultForegroundColor;
+	TitleBackgroundColor = WDefaultTitleBackgroundColor;
 	Title = L"DefaultTitle";
 }
 
@@ -22,7 +22,7 @@ void Menu::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		if (!bIsBeingDragged)
 		{
 			if (CursorPosition.X >= Position.X && CursorPosition.X < Position.X + Size.X
-				&& CursorPosition.Y >= Position.Y && CursorPosition.Y < Position.Y + TitleHeight)
+				&& CursorPosition.Y >= Position.Y && CursorPosition.Y < Position.Y + WTitleHeight)
 			{
 				bIsBeingDragged = true;
 				vecDragStartOffset = WVector2(CursorPosition.X - Position.X, CursorPosition.Y - Position.Y);
@@ -66,7 +66,7 @@ void Menu::Draw(ICanvas * canvas)
 	canvas->DrawFilledRect(absolutePos.X, absolutePos.Y, Size.X, Size.Y, WColor(BackgroundColor.R, BackgroundColor.G, BackgroundColor.B, BackgroundColor.A));
 	
 	// Title Background
-	canvas->DrawFilledRect(absolutePos.X, absolutePos.Y, Size.X, TitleHeight, WColor(TitleBackgroundColor.R, TitleBackgroundColor.G, TitleBackgroundColor.B, TitleBackgroundColor.A));
+	canvas->DrawFilledRect(absolutePos.X, absolutePos.Y, Size.X, WTitleHeight, WColor(TitleBackgroundColor.R, TitleBackgroundColor.G, TitleBackgroundColor.B, TitleBackgroundColor.A));
 
 	// Title Close
 	canvas->DrawLine(absolutePos.X + Size.X - CloseSize, absolutePos.Y + Padding, absolutePos.X + Size.X - Padding, absolutePos.Y + CloseSize, WColor(1, 1, 1, 1));

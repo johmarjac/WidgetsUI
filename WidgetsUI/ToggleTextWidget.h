@@ -3,7 +3,7 @@
 
 #define DefaultCheckedText				L"Enabled"
 #define DefaultUncheckedText			L"Disabled"
-#define DefaultBackgroundColor			WColor(0, 0, 0, 0);
+#define WDefaultBackgroundColor			WColor(0, 0, 0, 0);
 #define DefaultCheckedColor				WColor(0, 1, 0, 1);
 #define DefaultUncheckedColor			WColor(1, 0, 0, 1);
 #define DefaultBackgroundHoverColor		WColor(0.05f, 0.05f, 0.05f, 1);
