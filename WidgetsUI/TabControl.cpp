@@ -4,6 +4,7 @@
 TabControl::TabControl(Widget * parent)
 {
 	Parent = parent;
+	Size = WVector2( Parent->Size.X, Parent->Size.Y );
 	ClientAreaOffset = WVector2(0, WPageNameHeight);
 }
 

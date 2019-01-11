@@ -15,7 +15,7 @@ Menu::Menu()
 	Title = L"DefaultTitle";
 }
 
-const Menu * Menu::SetTitle( std::wstring title )
+Menu * Menu::SetTitle( std::wstring title )
 {
 	Title = title;
 
