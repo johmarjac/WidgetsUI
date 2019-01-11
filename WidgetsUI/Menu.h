@@ -20,6 +20,8 @@ public:
 	std::wstring Title;
 
 public:
+	const Menu * SetTitle( std::wstring title );
+
 	virtual void WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;
 	virtual void Update() override;
 	virtual void Draw(ICanvas* canvas) override;

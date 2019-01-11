@@ -58,6 +58,32 @@ WVector2 Widget::GetAbsolutePosition()
 	return WVector2(absPos.X + Position.X + Parent->ClientAreaOffset.X, absPos.Y + Position.Y + Parent->ClientAreaOffset.Y);
 }
 
+const Widget * Widget::SetSize( float x, float y )
+{
+	Size.X = x;
+	Size.Y = y;
+
+	return this;
+}
+
+const Widget * Widget::SetSize( WVector2 size )
+{
+	return SetSize( size.X, size.Y );
+}
+
+const Widget * Widget::SetPosition( float x, float y )
+{
+	Position.X = x;
+	Position.Y = y;
+
+	return this;
+}
+
+const Widget * Widget::SetPosition( WVector2 position )
+{
+	return SetPosition(position.X, position.Y);
+}
+
 void Widget::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	if (!Enabled)

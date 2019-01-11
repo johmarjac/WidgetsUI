@@ -53,6 +53,11 @@ public:
 	/// Gets the Widgets Absolute Position
 	WVector2 GetAbsolutePosition();
 
+	const Widget * SetSize( float x, float y );
+	const Widget * SetSize( WVector2 size );
+	const Widget * SetPosition( float x, float y );
+	const Widget * SetPosition( WVector2 position );
+
 	virtual void WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 	virtual void Update();
 	virtual void Draw(ICanvas* canvas);

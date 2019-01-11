@@ -15,6 +15,13 @@ Menu::Menu()
 	Title = L"DefaultTitle";
 }
 
+const Menu * Menu::SetTitle( std::wstring title )
+{
+	Title = title;
+
+	return this;
+}
+
 void Menu::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	if (message == WM_LBUTTONDOWN)
